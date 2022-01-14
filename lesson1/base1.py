@@ -52,6 +52,17 @@ aa=torch.zeros(2,1,3,1,2)
 torch.stack([a,b],dim=1)
 
 #take(input,index) 函数将input的index位置取出
-#tile(input, dim)  函数在dim维度进行复制
+#tile(input, [m,n])  函数在dim维度进行复制,行复制m份列复制n份
 
+torch.transpose(a,1,0)
+#unbind(input,dim=0) 沿着给定的维度返回多个tensor
+torch.unbind(a,dim=0) #dim默认为0
 
+#unsqueeze 函数，在某些特定的维度新增维度
+torch.unsqueeze(a, dim=0) #变换后的第dim维度为1 
+
+#where(condition,a,b) 条件成立选x,不成立选y
+#manual_seed(seed) #随机种子的设定，这样的论文可以复现
+
+#随机函数 1.bernoulli(a) 伯努利分布，返回0和1 
+#2.normal(mean,std，size=(2,3)) 高斯分布,尺寸为（2，3） 3.
